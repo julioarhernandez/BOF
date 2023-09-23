@@ -92,46 +92,17 @@
                             height: 35px;
                         -->
                        <!-- Image Logo For Background Transparent -->
-                        <a href="#" class="navbar-brand logo-black smooth-scroll"><img src="images/logo-black.png" alt="logo" /></a>
+                        <a href="#" class="navbar-brand logo-black smooth-scroll">
+                            BOF Medical Center
+<!--                            <img src="images/logo-black.png" alt="logo" />-->
+                        </a>
                         <a href="#" class="navbar-brand logo-white smooth-scroll"><img src="images/logo-white.png" alt="logo" /></a> 
                     </div><!-- /End Navbar Header -->
 
                     <div class="collapse navbar-collapse cta-header" id="navbar-collapse">
                         <!-- Menu Links -->
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#content2-1" class="smooth-scroll">About</a></li>
-                            <li><a href="#features11-1" class="smooth-scroll">Departments</a></li>
-                            <li><a href="#team6-1" class="smooth-scroll">Doctors</a></li>
-                            <li><a href="#contact6-1" class="smooth-scroll">Contact</a></li>
-                            <!-- Dropdown Menu -->
-                            <li class="dropdown">
-                                <a id="dLabel" data-toggle="dropdown" data-target="#" href="#">
-                                    Extra Pages <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu multi-level" role="menu">
-                                  <li><a href="blog-list.html">Blog List</a></li>
-                                  <li><a href="blog-single.html">Blog Single</a></li>
-                                  <li><a href="faq.html">Faq</a></li>
-                                  <li><a href="terms.html">Terms</a></li>
-                                  <li><a href="login.html">Login Page</a></li>
-                                  <li><a href="signup.html">Signup Page</a></li>
-                                  <li class="divider"></li>
-                                  <li class="dropdown-submenu">
-                                    <a tabindex="-1" href="#">Other Demos</a>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="consulting.html">Consulting</a></li>
-                                      <li><a href="webservice.html">Web Service</a></li>
-                                      <li><a href="agency.html">Agency</a></li>
-                                      <li><a href="elearning.html">E-Learning</a></li>
-                                      <li><a href="app.html">App</a></li>
-                                      <li><a href="woodworking.html">Wood Working</a></li>
-                                      <li><a href="event.html">Event</a></li>
-                                      <li><a href="yoga.html">Yoga</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                            </li>
-                            <li><a href="#hero11" class="btn-nav btn-blue smooth-scroll">Book Appointment</a></li>
+                            <li><a href="#content2-1" class="smooth-scroll">786-222-2222</a></li>
                         </ul><!-- /End Menu Links -->
                     </div><!-- /End Navbar Collapse -->
 
@@ -152,32 +123,35 @@
                     <div class="col-md-12 y-middle c2">
                         <!-- Intro Text -->
                         <div class="col-md-6 center-md text-white">
-                            <h1>We care for you</h1>
-                            <p class="lead f-w-700">Medical Services That You Can Trust.</p>
-                            <p class="m-t-md">Nesciunt quasi id vero porro, facere ducimus quis officiis nobis pariatur corrupti alias, deleniti earum perspiciatis neque sunt fugiat saepe impedit reiciendis iusto. Voluptas minima nobis ipsa rerum fugiat explicabo corporis.</p>
+                    <h1>Transform Your Life with Ozempic</h1>
+                    <p class="lead f-w-700">Experience Quick Weight Loss Without Diets or Exercises.</p>
+                    <p class="m-t-md">Discover the revolutionary power of Ozempic for rapid weight loss. Say goodbye to the struggles of diets and exercise routines. With Ozempic, you can achieve your weight loss goals quickly and effortlessly.</p>
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                            <form class="form-horizontal form-white form-2col text-white" id="dateForm">
-                                <h4 class="text-center">Make an Appointment</h4>
-                                <p class="text-center m-b-md">Just fill out the form below to make an appointment to get help from our qualified staff of doctors. It's easy and fast.</p>
+                    <form class="form-horizontal form-white form-2col text-white" id="dateForm">
+                        <h4 class="text-center">Start Your Ozempic Journey</h4>
+                        <p class="text-center m-b-md">Fill out the form below to embark on your path to a healthier, happier you. Experience the benefits of Ozempic for yourself.</p>
                                 <!-- Notifications -->
-                                <p class="success df text-center"><i class="fa fa-check"></i> <strong>Your message has successfully been sent.</strong></p>
-                                <p class="failed df text-center"><i class="fa fa-exclamation-circle"></i><strong> Something went wrong!</strong></p>
+                        <p class="success df text-center"><i class="fa fa-check"></i> <strong>Your message has successfully been sent.</strong></p>
+                        <p class="failed df text-center"><i class="fa fa-exclamation-circle"></i><strong> Something went wrong!</strong></p>
 
                                 <div class="form-group w-50">
-                                    <input type="text" class="form-control" id="dfName" placeholder="Name" required> 
-                                    <input type="email" class="form-control" id="dfEmail" placeholder="Email" required>
+                            <input type="text" class="form-control" id="dfName" placeholder="Name" required="">
+                            <input type="email" class="form-control" id="dfEmail" placeholder="Email" required="">
                                 </div>
                                 <div class="form-group w-50">
-                                    <input type="tel" class="form-control" id="dfPhone" placeholder="Phone Number" required>
-                                    <input type="text" class="form-control" id="dfDate" placeholder="Booking Date" required>
+                            <input type="tel" class="form-control" id="dfPhone" placeholder="Phone Number" required="">
+                            <input type="text" class="form-control picker__input" id="dfDate" placeholder="Appointment Date" required="" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="dfDate_root">
+                            <div class="picker" id="dfDate_root" aria-hidden="true">
+                                <!-- Calendar date picker goes here -->
+                            </div>
                                 </div>
                                 <div class="form-group">
                                     <textarea id="dfMessage" rows="5" class="form-control" placeholder="Your Message"  required></textarea>
                                 </div> 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-shadow btn-blue">BOOK NOW!</button>
+                            <button type="submit" class="btn btn-shadow btn-blue">START YOUR JOURNEY!</button>
                                 </div>
                             </form>
                         </div><!-- /End Booking Form -->
@@ -199,8 +173,8 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="section-header text-center wow fadeIn">
-                            <h2 class="m-b-md">Providing Total Health Care Solution</h2>
-                            <p class="lead m-b-md">Each day the staff at Getleads strives for continued progress in clinical excellence, ratione excepturi debitis saepe aspernatur tempora, cumque esse.</p>
+                    <h2 class="m-b-md">Experience Rapid Weight Loss with Ozempic</h2>
+                    <p class="lead m-b-md">Unlock the Power of Ozempic for Quick and Effective Weight Loss</p>
                         </div>
                     </div>
                 </div>
@@ -216,10 +190,10 @@
                     <!-- Text Block -->
                     <div class="col-md-6 col-md-pull-6 bg-edit bg-blue text-white spotlight-text center-md">
                         <div class="vertical-center-rel">
-                            <h6 class="text-uppercase f-w-900 wow slideInLeft">World Renowned Doctors</h6>
-                            <h3 class="f-w-900 m-b-md wow slideInLeft">Pioneering New Treatment Options In Patient Care.</h3>
-                            <p class="m-b-md">Democritum inciderint nam ut, duo ne rebum tibique molestiae, mediocrem incorrupte dissentiunt has in. Vidisse gloriatur eum in, alia docendi molestie est te. Nam facer erant aeterno te, sed no utamur perfecto.</p>
-                            <a href="#team6-1" class="btn btn-ghost smooth-scroll text-uppercase">Our Doctors</a>
+                            <h6 class="text-uppercase f-w-900 wow slideInRight">Transform Your Life</h6>
+                            <h3 class="f-w-900 m-b-md wow slideInRight">Discover the Benefits of Ozempic for Weight Loss.</h3>
+                            <p class="m-b-md">Are you struggling with weight loss? Ozempic is here to help you achieve your goals without the need for strict diets or strenuous exercise routines. Experience rapid and sustainable weight loss with Ozempic.</p>
+                            <a href="#contact-form" class="btn btn-ghost smooth-scroll text-uppercase">Get Started</a>
                         </div>
                     </div>
                 </div><!-- /End Row -->
@@ -228,204 +202,25 @@
         </section>
         <!-- /End Content Intro -->
 
-
         <!-- =========================
-           DEPARTMENTS SECTION
+            CTA SECTION
         ============================== -->
-        <section id="features11-1" class="p-y-lg bg-edit">
+        <section id="cta4" class="p-y-md cta bg-edit bg-dark content-align-md">
             <div class="container">
-                <!-- Section Header -->
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="section-header text-center wow fadeIn">
-                            <h2>Our Departments</h2>
-                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque dolores unde earum repellendus esse molestias explicabo deleniti.</p>
+                    <div class="col-md-10 col-md-offset-1 outline no-border y-middle c2">
+                        <div class="col-md-7">
+                            <h4 class="text-white">Do you need help from our experts?</h4>
+                            <p class="text-white m-b-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eum dolorem iusto, corrupti accusamus nostrum rem eveniet.</p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <a href="#hero11" class="btn btn-shadow btn-blue btn-md smooth-scroll">Book an Appointment</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="row features-panels">
-                    <!-- Features Nav-Tabs -->
-                    <div class="col-md-12 p-b-md">
-                        <ul class="nav nav-tabs nav-justified m-b-md" role="tablist">
-                            <li role="presentation" class="active"><a href="#dental" role="tab" data-toggle="tab" class="text-edit"><img src="images/department2.png" alt="">Dental Care</a></li>
-                            <li role="presentation"><a href="#cardiology" role="tab" data-toggle="tab" class="text-edit"><img src="images/department1.png" alt="">Cardiology</a></li>
-                            <li role="presentation"><a href="#eyecare" role="tab" data-toggle="tab" class="text-edit"><img src="images/department3.png" alt="">Eye Care</a></li>
-                            <li role="presentation"><a href="#neurology" role="tab" data-toggle="tab" class="text-edit"><img src="images/department4.png" alt="">Neurology</a></li>
-                            <li role="presentation"><a href="#ent" role="tab" data-toggle="tab" class="text-edit"><img src="images/department5.png" alt="">Ent Center</a></li>
-                            <li role="presentation"><a href="#orthopedics" role="tab" data-toggle="tab" class="text-edit"><img src="images/department6.png" alt="">Orthopedics</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Tab Content -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active wow fadeIn" id="dental">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6 col-md-push-6">
-                                        <h3 class="f-w-900">Dental Care</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-pull-6">
-                                        <img src="images/medical-3.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 1 -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="cardiology">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6">
-                                        <h3 class="f-w-900">Cardiology</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/medical-4.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 2 -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="eyecare">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6 col-md-push-6">
-                                        <h3 class="f-w-900">Eye Care</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-pull-6">
-                                        <img src="images/medical-3.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 3 -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="neurology">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6">
-                                        <h3 class="f-w-900">Neurology</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/medical-4.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 4 -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="ent">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6 col-md-push-6">
-                                        <h3 class="f-w-900">Ent Center</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-pull-6">
-                                        <img src="images/medical-3.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 5 -->
-
-                        <div role="tabpanel" class="tab-pane fade" id="orthopedics">
-                            <div class="content-block content-align-md">
-                                <div class="col-md-10 c2 col-md-offset-1 y-middle">
-                                    <div class="col-md-6">
-                                        <h3 class="f-w-900">Orthopedics</h3>
-                                        <h5 class="m-t-md m-b-md">Velit sunt eos iste explicabo adipisci laboriosam itaque, distinctio doloribus dicta.</h5>
-                                        <p class="m-b-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corporis ea consequatur quas, id voluptatem, non doloribus necessitatibus dolores autem alias ipsa.</p>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Qualified Staff of Doctors</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">24x7 Emergency Services</p>
-                                        </div>
-                                        <div class="icon-left"> 
-                                            <i class="fa fa-check-circle-o" style="color:#439FE0;"></i>
-                                            <p class="m-t">Medical Counseling</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/medical-4.jpg" class="img-responsive m-x-auto" alt="">
-                                    </div>
-                                </div>
-                            </div><!-- /End Content Block-->
-                        </div><!-- /End of Tab-panel 6 -->
-                    </div><!-- /End Tab-Content -->
-                </div><!-- /End Row -->
-            
             </div><!-- /End Container -->
         </section>
-        <!-- /End Departments -->
+        <!-- /End Cta Section -->
 
 
         <!-- =========================
@@ -522,8 +317,8 @@
                 <!-- Item Carousel -->
                 <div class="row c3">
 
-                    <div id="carousel-team1" class="carousel slide carousel-team" data-ride="carousel" data-interval="7000"> 
-                        
+                    <div id="carousel-team1" class="carousel slide carousel-team" data-ride="carousel" data-interval="7000">
+
                         <!-- Indicators -->
                         <ol class="carousel-indicators inverse">
                             <li data-target="#carousel-team1" data-slide-to="0" class="active"></li>
@@ -603,7 +398,7 @@
                                     </div>
                                     <h5 class="f-w-900">Dr. Diana Powell</h5>
                                     <p class="role">Dental Surgeon</p>
-                                    <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto animi vero eos velit at illo maiores. Distinctio voluptates doloribus.</p>  
+                                    <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto animi vero eos velit at illo maiores. Distinctio voluptates doloribus.</p>
                                 </div><!-- /End Col -->
 
                                 <div class="col-sm-4 col-xs-12">
@@ -641,123 +436,17 @@
                                 </div><!-- /End Col -->
                             </div>
                             <!-- /End Item -->
-                            
-                        </div><!-- /End Wrapper --> 
+
+                        </div><!-- /End Wrapper -->
                     </div><!-- /End Carousel -->
-                    
+
                 </div><!-- /End Row -->
-            
+
             </div><!-- /End Container -->
 
         </section> 
         <!-- /End Team -->
 
-
-        <!-- =========================
-            CTA SECTION
-        ============================== -->
-        <section id="cta4" class="p-y-md cta bg-edit bg-dark content-align-md">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 outline no-border y-middle c2">
-                        <div class="col-md-7">
-                            <h4 class="text-white">Do you need help from our experts?</h4>
-                            <p class="text-white m-b-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eum dolorem iusto, corrupti accusamus nostrum rem eveniet.</p>
-                        </div>
-                        <div class="col-md-5 text-center">
-                            <a href="#hero11" class="btn btn-shadow btn-blue btn-md smooth-scroll">Book an Appointment</a>
-                        </div>                            
-                    </div>
-                </div>
-            </div><!-- /End Container -->
-        </section>
-        <!-- /End Cta Section -->
-
-
-        <!-- =========================
-             BLOG SECTION
-        ============================== -->
-        <section id="blog3-1" class="p-t-lg p-b-sm blog bg-edit">
-            <div class="container">
-                <!-- Section Header -->
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="section-header text-center wow fadeIn">
-                            <h2>Latest News</h2>
-                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque dolores unde earum repellendus esse molestias explicabo deleniti doloribus.</p> 
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 content-block c2">
-                        <!-- Blog Post -->
-                        <div class="col-sm-6">
-                            <a href=""><img src="images/medical-1.jpg" alt="" class="img-responsive img-rounded"></a>
-                            <div class="post-info">
-                                <div class="date text-edit">
-                                    <span class="day">25</span>
-                                    Nov
-                                </div>
-                                <a href=""><h5>Provident cumque nam odit reiciendis iste sunt est sapiente rerum.</h5></a>
-                                <h6 class="p-opacity">Posted by Harold Butler in <strong>Neurology</strong></h6>
-                            </div>
-                            <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                            <a href="" class="more-link edit">Continue Reading ...</a>
-                        </div>
-                        <!-- Blog Post -->
-                        <div class="col-sm-6">
-                            <a href=""><img src="images/medical-4.jpg" alt="" class="img-responsive img-rounded"></a>
-                            <div class="post-info">
-                                <div class="date text-edit">
-                                    <span class="day">12</span>
-                                    Oct
-                                </div>
-                                <a href=""><h5>Minus cupiditate sapiente esse vel sint totam quos hic natus assumenda. </h5></a>
-                                <h6 class="p-opacity">Posted by Anthony Kim in <strong>Medical Center</strong></h6>
-                            </div>
-                            <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                            <a href="" class="more-link edit">Continue Reading ...</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row new-row-md">
-                    <div class="col-md-10 col-md-offset-1 content-block c2">
-                        <!-- Blog Post -->
-                        <div class="col-sm-6">
-                            <a href=""><img src="images/medical-3.jpg" alt="" class="img-responsive img-rounded"></a>
-                            <div class="post-info">
-                                <div class="date text-edit">
-                                    <span class="day">26</span>
-                                    Sep
-                                </div>
-                                <a href=""><h5>Magni vitae ducimus voluptatem.</h5></a>
-                                <h6 class="p-opacity">Posted by Carl Bradley in <strong>Staff</strong></h6>
-                            </div>
-                            <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                            <a href="" class="more-link edit">Continue Reading ...</a>
-                        </div>
-                        <!-- Blog Post -->
-                        <div class="col-sm-6">
-                            <a href=""><img src="images/doctor3.jpg" alt="" class="img-responsive img-rounded"></a>
-                            <div class="post-info">
-                                <div class="date text-edit">
-                                    <span class="day">8</span>
-                                    Aug
-                                </div>
-                                <a href=""><h5>Impedit quibusdam ratione nihil.</h5></a>
-                                <h6 class="p-opacity">Posted by Frank Smith in <strong>Dental Clinic</strong></h6>
-                            </div>
-                            <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                            <a href="" class="more-link edit">Continue Reading ...</a>
-                        </div>
-                    </div>
-                </div><!-- /End Row -->
-            </div><!-- /End Container -->
-        
-        </section>
-        <!-- /End Blog -->
 
 
         <!-- =========================
@@ -855,17 +544,6 @@
                                 <button type="submit" class="btn btn-blue">Subscribe</button>
                             </form>
 
-                            <!-- Php Form -->
-                            <!--
-                            <form class="form-inline" id="subscribeForm" role="form">
-                                <p class="success sf text-center"><i class="fa fa-check"></i> <strong>You have successfully subscribed.</strong></p>
-                                <p class="failed sf text-center"><i class="fa fa-exclamation-circle"></i><strong> Something went wrong!</strong></p>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="sfEmail" placeholder="Email" required>
-                                </div>
-                                <button type="submit" class="btn btn-blue">Subscribe</button>
-                            </form>
-                            -->
                         </div>
                     </div>
                 </div><!-- /End Row -->
