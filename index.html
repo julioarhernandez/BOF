@@ -139,30 +139,47 @@
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                    <form class="form-horizontal form-white form-2col text-white" id="dateForm">
-                        <h4 class="text-center">Start Your Ozempic Journey</h4>
-                        <p class="text-center m-b-md">Fill out the form below to embark on your path to a healthier, happier you. Experience the benefits of Ozempic for yourself.</p>
+                            <form class="form-horizontal form-white form-2col text-white" id="dateForm">
+                                <h4 class="text-center">Start Your Ozempic Journey</h4>
+                                <p class="text-center m-b-md">Fill out the form below to embark on your path to a
+                                    healthier, happier you. Experience the benefits of Ozempic for yourself.</p>
                                 <!-- Notifications -->
-                        <p class="success df text-center"><i class="fa fa-check"></i> <strong>Your message has successfully been sent.</strong></p>
-                        <p class="failed df text-center"><i class="fa fa-exclamation-circle"></i><strong> Something went wrong!</strong></p>
+                                <p class="success df text-center"><i class="fa fa-check"></i> <strong>Your message has
+                                    successfully been sent.</strong></p>
+                                <p class="failed df text-center"><i class="fa fa-exclamation-circle"></i><strong>
+                                    Something went wrong!</strong></p>
+                                <div class="bmi">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="dfWeight" placeholder="Weight (pounds)" required="" name="dfWeight">
+                                    </div>
+                                    <div class="form-group w-50">
+                                        <input type="number" class="form-control" id="dfHeightFeet" placeholder="Height (feet)"
+                                               required="" min="1" max="7" name="dfHeightFeet">
+                                        <input type="number" class="form-control" id="dfHeightInches" placeholder="Height (inches)"
+                                               required="" min="0" max="11" name="dfHeightInches">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-shadow btn-blue" id="calculateBMI">CHECK MY BODY MASS INDEX (BMI)</button>
+                                    </div>
+                                </div>
+                                <div class="contact-after" style="display: none">
+                                    <p style="font-weight: bold;text-align: center;">Your BMI is acceptable for our treatment</p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="dfName" placeholder="Name" required="" name="dfName">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="dfPhone" placeholder="Phone Number"
+                                               required="" name="dfPhone">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="dfEmail" placeholder="Email" required="" name="dfEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-shadow btn-blue">START YOUR JOURNEY!</button>
+                                    </div>
+                                </div>
 
-                                <div class="form-group w-50">
-                            <input type="text" class="form-control" id="dfName" placeholder="Name" required="">
-                            <input type="email" class="form-control" id="dfEmail" placeholder="Email" required="">
-                                </div>
-                                <div class="form-group w-50">
-                            <input type="tel" class="form-control" id="dfPhone" placeholder="Phone Number" required="">
-                            <input type="text" class="form-control picker__input" id="dfDate" placeholder="Appointment Date" required="" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="dfDate_root">
-                            <div class="picker" id="dfDate_root" aria-hidden="true">
-                                <!-- Calendar date picker goes here -->
-                            </div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="dfMessage" rows="5" class="form-control" placeholder="Your Message"  required></textarea>
-                                </div> 
-                                <div class="form-group">
-                            <button type="submit" class="btn btn-shadow btn-blue">START YOUR JOURNEY!</button>
-                                </div>
+
                             </form>
                         </div><!-- /End Booking Form -->
                     </div><!-- /End Col -->
@@ -517,7 +534,33 @@
     <script src="js/plugins/picker.date.js"></script>
     <!-- Custom Script -->
     <script src="js/custom.js"></script>
+    <script>
+        // Function to calculate BMI
+        document.getElementById("calculateBMI").addEventListener("click", function () {
+            // Get weight in pounds and convert to a number
+            const weight = parseFloat(document.getElementById("dfWeight").value);
 
+            // Get height in feet and inches and convert to a single height in inches
+            const heightFeet = parseInt(document.getElementById("dfHeightFeet").value);
+            const heightInches = parseInt(document.getElementById("dfHeightInches").value);
+            const heightInInches = (heightFeet * 12) + heightInches;
+
+            // Calculate BMI
+            const bmi = (weight / (heightInInches * heightInInches)) * 703;
+
+            // Check if BMI is greater than 10
+            if (bmi > 10) {
+                // Hide the BMI section
+                document.querySelector(".bmi").style.display = "none";
+
+                // Show the contact-after section
+                document.querySelector(".contact-after").style.display = "block";
+                document.querySelector(".contact-after").style.display = "block";
+            } else {
+                alert("BMI is less than or equal to 10. Please check your inputs.");
+            }
+        });
+    </script>
     
 </body>
 </html>

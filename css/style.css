@@ -2054,7 +2054,7 @@ textarea {
 }
 
 .hero-leadbox .form-horizontal.form-2col {
-    padding: 40px 40px 20px;
+    padding: 54px 70px 20px;
 }
 
 .hero-leadbox h5 {
@@ -2066,6 +2066,7 @@ textarea {
     display: inline-block;
     width: 49.5%;
 }
+
 
 .hero-leadbox .feature-box i {
     font-size: 50px;

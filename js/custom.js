@@ -453,34 +453,34 @@ if( $("#dfDate").length ) {
 /* ==========================================
    APPOINTMENT WITH DATEPICKER FORM
 ============================================= */
-$("#dateForm").on('submit', function(e) {
-    e.preventDefault();
-    var data = {
-        name: $("#dfName").val(),
-        email: $("#dfEmail").val(),
-        phone: $("#dfPhone").val(),
-        date: $("#dfDate").val(),
-        message: $("#dfMessage").val()
-    };
-
-    if ( isValidEmail(data['email']) && (data['name'].length > 1) && (data['date'].length > 1) && (data['message'].length > 1) && isValidPhoneNumber(data['phone']) ) {
-        $.ajax({
-            type: "POST",
-            url: "php/appointment.php",
-            data: data,
-            success: function() {
-                $('.success.df').delay(500).fadeIn(1000);
-                $('.failed.df').fadeOut(500);
-            }
-        });
-    } else {
-        $('.failed.df').delay(500).fadeIn(1000);
-        $('.success.df').fadeOut(500);
-    }
-
-    return false;
-});
-
+// $("#dateForm").on('submit', function(e) {
+//     e.preventDefault();
+//     var data = {
+//         name: $("#dfName").val(),
+//         email: $("#dfEmail").val(),
+//         phone: $("#dfPhone").val(),
+//         date: $("#dfDate").val(),
+//         message: $("#dfMessage").val()
+//     };
+//
+//     if ( isValidEmail(data['email']) && (data['name'].length > 1) && (data['date'].length > 1) && (data['message'].length > 1) && isValidPhoneNumber(data['phone']) ) {
+//         $.ajax({
+//             type: "POST",
+//             url: "php/appointment.php",
+//             data: data,
+//             success: function() {
+//                 $('.success.df').delay(500).fadeIn(1000);
+//                 $('.failed.df').fadeOut(500);
+//             }
+//         });
+//     } else {
+//         $('.failed.df').delay(500).fadeIn(1000);
+//         $('.success.df').fadeOut(500);
+//     }
+//
+//     return false;
+// });
+//
 
 /* ==========================================
    SUBSCRIBE FORM / ONLY EMAIL
