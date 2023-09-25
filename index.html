@@ -49,6 +49,23 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- Event snippet for SubmitLeadForm conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-931776128/gz2XCJ_7vOUYEICNp7wD',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
 
 </head>
 
@@ -149,7 +166,7 @@
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://formspree.io/f/mjvqadgy" method="post">
+                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://formspree.io/f/xeqbrnga" method="post">
                                 <h4 class="text-center">Start Your Ozempic Journey</h4>
                                 <p class="text-center m-b-md">Fill out the form below to embark on your path to a
                                     healthier, happier you. Experience the benefits of Ozempic for yourself.</p>
@@ -572,6 +589,66 @@
                 alert("Your BMI does not meet the eligibility criteria for our weight loss program.");
             }
         });
+
+        // Check form errors
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the form element
+            var form = document.getElementById("dateForm");
+
+            // Add a submit event listener to the form
+            form.addEventListener("submit", function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Perform your error checking here
+                var nameInput = document.getElementById("dfName").value;
+                var phoneInput = document.getElementById("dfPhone").value;
+                var emailInput = document.getElementById("dfEmail").value;
+
+                // Clean the phone number input
+                phoneInput = cleanPhoneNumber(phoneInput);
+
+
+                console.info(phoneInput);
+
+                if (nameInput.trim() === "") {
+                    alert("Please enter your name.");
+                    return; // Prevent form submission if there's an error
+                }
+
+                if (!isValidPhoneNumber(phoneInput)) {
+                    alert("Please enter your phone number.");
+                    return; // Prevent form submission if there's an error
+                }
+
+                if (!isValidEmail(emailInput)) {
+                    alert("Please enter a valid email address.");
+                    return; // Prevent form submission if there's an error
+                }
+
+                // If there are no errors, you can submit the form and send the conversion to gtag
+                gtag_report_conversion();
+                form.submit();
+            });
+
+            function isValidPhoneNumber(phone) {
+                var phonePattern = /^\d+$/;
+                return phonePattern.test(phone);
+            }
+
+            // Function to validate email format
+            function isValidEmail(email) {
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
+            }
+
+            // Function to clean phone number input
+            function cleanPhoneNumber(phone) {
+                // Remove common symbols and non-numeric characters
+                return phone.replace(/[^0-9]/g, "");
+            }
+        });
+
     </script>
     
 </body>
