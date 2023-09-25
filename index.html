@@ -139,7 +139,7 @@
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://formspree.io/f/xeqbrnga" method="post">
+                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://formspree.io/f/mjvqadg" method="post">
                                 <h4 class="text-center">Start Your Ozempic Journey</h4>
                                 <p class="text-center m-b-md">Fill out the form below to embark on your path to a
                                     healthier, happier you. Experience the benefits of Ozempic for yourself.</p>
@@ -193,7 +193,7 @@
         <!-- =========================
            CONTENT SECTION
         ============================== -->
-        <section id="content2-1" class="content-spotlight bg-edit p-t-lg p-b-lg">
+        <section id="content2-1" class="content-spotlight bg-edit p-b-lg p-t-lg-mdup p-t-md p-b-0-mddown">
             
             <!-- Section Header -->
             <div class="container">
@@ -338,7 +338,7 @@
         <!-- =========================
              TEAM SECTION
         ============================== -->
-        <section id="team6-1" class="p-y-lg team bg-edit">
+        <section id="team6-1" class="p-y-mddown p-y-lg team bg-edit">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -414,7 +414,7 @@
         <!-- =========================
            CONTACT SECTION
         ============================== -->
-        <section id="contact6-1" class="content-spotlight m-b-0 p-y-lg bg-edit">
+        <section id="contact6-1" class="p-y-mddown p-b-0-mddown content-spotlight m-b-0 p-y-lg bg-edit">
             <div class="container p-a-0">
                 <!-- Section Header -->
                 <div class="row">
@@ -443,7 +443,7 @@
                                 United States
                             </p>
                             <p class="m-b-md">Our medical center is conveniently located in North Miami, Florida, providing easy access to quality healthcare services. We understand the importance of your well-being and are committed to delivering the best care possible</p>
-                            <a href="https://www.google.com/maps/place/12440+Biscayne+Blvd,+North+Miami,+Florida+33181,+United+States" class="btn btn-white smooth-scroll">GET DIRECTIONS</a>
+<!--                            <a href="https://www.google.com/maps/place/12440+Biscayne+Blvd,+North+Miami,+Florida+33181,+United+States" class="btn btn-white smooth-scroll">GET DIRECTIONS</a>-->
                         </div>
                     </div>
                 </div><!-- /End Row -->
@@ -548,8 +548,10 @@
             // Calculate BMI
             const bmi = (weight / (heightInInches * heightInInches)) * 703;
 
+            console.log(bmi);
+
             // Check if BMI is greater than 10
-            if (bmi > 10) {
+            if (bmi >= 27) {
                 // Hide the BMI section
                 document.querySelector(".bmi").style.display = "none";
 
@@ -557,7 +559,7 @@
                 document.querySelector(".contact-after").style.display = "block";
                 document.querySelector(".contact-after").style.display = "block";
             } else {
-                alert("BMI is less than or equal to 10. Please check your inputs.");
+                alert("BMI is less than 27. Please check your inputs.");
             }
         });
     </script>

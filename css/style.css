@@ -1529,6 +1529,17 @@ textarea {
 .p-x-lg { padding-right:  120px !important; padding-left:   120px !important; }
 .p-y-lg { padding-top:    120px !important; padding-bottom: 120px !important; }
 
+@media screen and (min-width: 991px) {
+    .p-t-lg-mdup { padding-top:    120px !important; }
+    .p-y-0-mdup { padding-top:    0 !important; padding-bottom: 0 !important; }
+}
+@media screen and (max-width: 991px) {
+    .p-b-0-mddown { padding-bottom:    0 !important; }
+    .p-y-mddown { padding-top:    30px !important; padding-bottom: 30px !important; }
+    .p-b-0-mddown {
+        padding-bottom:    0 !important;
+    }
+}
 /* centering vertically section*/
 .vertical-center-abs, .vertical-center-rel{
     top: 50%;
@@ -2044,6 +2055,12 @@ textarea {
     padding-top: 150px;
     padding-bottom: 100px;
 }
+@media (max-width: 768px) {
+    .hero-leadbox {
+        padding-top: 120px;
+        background-position: 31%;
+    }
+}
 
 .hero-leadbox .form-horizontal {
     padding: 30px 40px 10px;
@@ -2057,6 +2074,11 @@ textarea {
     padding: 54px 70px 20px;
 }
 
+@media (max-width: 768px) {
+    .hero-leadbox .form-horizontal.form-2col {
+        padding: 35px 40px 20px;
+    }
+}
 .hero-leadbox h5 {
     font-size: 20px;
     font-weight: 900;
@@ -2242,8 +2264,14 @@ textarea {
 /*------------------------------------------*/
 /*  Content Spotlight
 /*------------------------------------------*/
-.content-spotlight {
-    margin-bottom: 20px;
+/*.content-spotlight {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+/* */
+@media screen and (min-width: 991px) {
+    .content-spotlight {
+        margin-bottom: 20px;
+    }
 }
 
 .spotlight-block>figure{
