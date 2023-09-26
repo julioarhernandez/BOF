@@ -70,6 +70,9 @@ a:active {
     transition: all 0.25s ease-out;
 }
 
+.orange {
+    color: #ffc04d !important;
+}
 a.inverse, 
 .inverse a,
 i.inverse {
