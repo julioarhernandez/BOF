@@ -266,7 +266,7 @@
     /*    Navbar Transparent
     /*-----------------------------------------------------------*/
     .navbar.bg-transparent {
-        background-color: #fff;
+        background-color: transparent;
     }
 
     .navbar.bg-transparent .logo-white {

@@ -1642,6 +1642,22 @@ textarea {
     opacity: 1;
 }
 
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-text a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar-call {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 /*------------------------------------------*/
 /*   Navbar Transparent/ Navbar Color
 /*------------------------------------------*/
@@ -1657,7 +1673,7 @@ textarea {
 }
 
 .navbar.bg-transparent.top-nav-collapse {
-    background-color: #fff;
+    background-color: #439fe0;
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
