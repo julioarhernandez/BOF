@@ -4198,7 +4198,7 @@ input.toggle-round-flat:checked + label:after {
 }
 
 .footer a {
-    color: #69696E;
+    color: white;
 }
 
 .footer ul {
