@@ -148,7 +148,7 @@
                         <div class="navbar-text">
                             <div class="navbar-call">
                                 <img alt="call us at 305-891-0080" src="images/call-ringing-svgrepo-com.svg" style="width: 30px"/>
-                                <a href="tel:305-891-0080" class="smooth-scroll">305-891-0080</a>
+                                <a href="tel:305-891-0080" class="" id="phoneConvertion">305-891-0080</a>
                             </div>
 
                         </div>
@@ -646,6 +646,13 @@
                 // If there are no errors, you can submit the form and send the conversion to gtag
                 gtag_report_conversion();
                 form.submit();
+            });
+
+            // Function to track phone number link click as a conversion
+            var phoneLink = document.getElementById("phoneConvertion");
+            phoneLink.addEventListener("click", function () {
+                // Call the gtag function to track the phone number click as a conversion
+                gtag_report_conversion();
             });
 
             function isValidPhoneNumber(phone) {
