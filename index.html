@@ -51,6 +51,16 @@
     <![endif]-->
     <!-- Event snippet for SubmitLeadForm conversion page
     In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-931776128"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-931776128');
+    </script>
+    <!-- Event snippet for conversion page -->
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
@@ -65,8 +75,6 @@
             return false;
         }
     </script>
-
-
 </head>
 
 <!-- Google tag (gtag.js) -->
