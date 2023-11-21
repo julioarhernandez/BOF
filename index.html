@@ -178,7 +178,7 @@
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://formspree.io/f/mjvqadgy" method="post">
+                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://campaign.bofmedical.com/api/" method="post">
                                 <h4 class="text-center">Start Your <span class="orange">Ozempic</span> Journey</h4>
                                 <p class="text-center m-b-md">Fill out the form below to embark on your path to a
                                     healthier, happier you. Experience the benefits of <span class="orange">Ozempic</span> for yourself.</p>
@@ -612,6 +612,9 @@
             // Get the form element
             var form = document.getElementById("dateForm");
 
+            // Get the form action URL
+            var formAction = form.action;
+
             // Add a submit event listener to the form
             form.addEventListener("submit", function (event) {
                 // Prevent the default form submission
@@ -643,10 +646,57 @@
                     return; // Prevent form submission if there's an error
                 }
 
-                // If there are no errors, you can submit the form and send the conversion to gtag
-                gtag_report_conversion();
-                form.submit();
+                // If there are no errors, send the form data to the actions page
+                sendDataToActionsPage(formAction);
             });
+
+            function sendDataToActionsPage(actionUrl) {
+                // Deactivate all inputs and buttons inside the form
+                deactivateFormElements();
+                // Extract form data
+                var formData = new FormData(form);
+
+                // Create a new XMLHttpRequest object
+                var xhr = new XMLHttpRequest();
+
+                // Set up the request with the retrieved action URL
+                xhr.open("POST", actionUrl, true);
+
+                // Set the callback function for when the request completes
+                xhr.onload = function () {
+                    // Reactivate all inputs and buttons inside the form
+                    reactivateFormElements();
+                    if (xhr.status === 200) {
+                        // The request was successful
+                        console.log("Form submission successful");
+                        // gtag_report_conversion();
+                        alert("Form submitted successfully!");
+                    } else {
+                        // The request failed
+                        console.error("Form submission failed");
+                        alert("Form submission failed!");
+                    }
+                };
+
+                // Send the form data
+                xhr.send(formData);
+            }
+
+            function deactivateFormElements() {
+                // Deactivate all inputs and buttons inside the form
+                var formElements = form.elements;
+                for (var i = 0; i < formElements.length; i++) {
+                    formElements[i].disabled = true;
+                }
+            }
+
+            function reactivateFormElements() {
+                // Reactivate all inputs and buttons inside the form
+                var formElements = form.elements;
+                for (var i = 0; i < formElements.length; i++) {
+                    formElements[i].disabled = false;
+                }
+            }
 
             // Function to track phone number link click as a conversion
             var phoneLink = document.getElementById("phoneConvertion");
