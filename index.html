@@ -628,9 +628,6 @@
                 // Clean the phone number input
                 phoneInput = cleanPhoneNumber(phoneInput);
 
-
-                console.info(phoneInput);
-
                 if (nameInput.trim() === "") {
                     alert("Please enter your name.");
                     return; // Prevent form submission if there's an error
@@ -651,10 +648,16 @@
             });
 
             function sendDataToActionsPage(actionUrl) {
-                // Deactivate all inputs and buttons inside the form
-                deactivateFormElements();
                 // Extract form data
                 var formData = new FormData(form);
+
+                // Deactivate all inputs and buttons inside the form
+                // this should occur after creating the formData
+                // otherwise disabled inputs won't populate FormData
+                deactivateFormElements();
+
+                // Set loading class to form
+                form.classList.add("loading-form");
 
                 // Create a new XMLHttpRequest object
                 var xhr = new XMLHttpRequest();
@@ -668,11 +671,16 @@
                     reactivateFormElements();
                     if (xhr.status === 200) {
                         // The request was successful
-                        console.log("Form submission successful");
-                        // gtag_report_conversion();
-                        alert("Form submitted successfully!");
+                        setTimeout(function () {
+                            // Remove loading class and hide loader overlay after form submission
+                            form.classList.remove("loading-form");
+                            // gtag_report_conversion();
+                            alert("Form submitted successfully!");
+                        }, 500); // Simulated delay
+
                     } else {
                         // The request failed
+                        form.classList.remove("loading-form");
                         console.error("Form submission failed");
                         alert("Form submission failed!");
                     }
