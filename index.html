@@ -24,10 +24,10 @@
 
     <!-- FONT ICONS -->
     <link rel="stylesheet" href="css/icons/iconfont.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
      
     <!-- GOOGLE FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     
     <!-- PLUGINS STYLESHEET -->
     <link rel="stylesheet" href="css/plugins/magnific-popup.css">
@@ -178,7 +178,7 @@
                         </div>
                         <!-- Booking Form -->
                         <div class="col-md-6">
-                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="https://campaign.bofmedical.com/api/" method="post">
+                            <form class="form-horizontal form-white form-2col text-white" id="dateForm" action="/api" method="post">
                                 <h4 class="text-center">Start Your <span class="orange">Ozempic</span> Journey</h4>
                                 <p class="text-center m-b-md">Fill out the form below to embark on your path to a
                                     healthier, happier you. Experience the benefits of <span class="orange">Ozempic</span> for yourself.</p>
@@ -643,11 +643,18 @@
                     return; // Prevent form submission if there's an error
                 }
 
+                // Check if the email was submitted within the last 5 days
+                if (isEmailRecentlySubmitted(emailInput, 5)) {
+                    alert("You have already submitted this information. We are currently processing it and will be in touch with you shortly");
+                    return; // Prevent form submission if the email was submitted recently
+                }
+
                 // If there are no errors, send the form data to the actions page
-                sendDataToActionsPage(formAction);
+                sendDataToActionsPage(formAction, emailInput);
+
             });
 
-            function sendDataToActionsPage(actionUrl) {
+            function sendDataToActionsPage(actionUrl, emailInput) {
                 // Extract form data
                 var formData = new FormData(form);
 
@@ -675,7 +682,10 @@
                             // Remove loading class and hide loader overlay after form submission
                             form.classList.remove("loading-form");
                             gtag_report_conversion();
-                            alert("Form submitted successfully!");
+                            alert("You have submitted this information successfully. We are currently processing it and will be in touch with you shortly");
+
+                            // Mark the email as submitted with the current timestamp
+                            markEmailAsSubmitted(emailInput);
                         }, 500); // Simulated delay
 
                     } else {
@@ -704,6 +714,22 @@
                 for (var i = 0; i < formElements.length; i++) {
                     formElements[i].disabled = false;
                 }
+            }
+
+            function isEmailRecentlySubmitted(email, days) {
+                // Check if the email was submitted within the last specified days
+                var lastSubmissionTimestamp = localStorage.getItem("lastSubmissionTimestamp_" + email);
+                if (lastSubmissionTimestamp) {
+                    var currentTime = new Date().getTime();
+                    return currentTime - lastSubmissionTimestamp < days * 24 * 60 * 60 * 1000;
+                }
+                return false;
+            }
+
+            function markEmailAsSubmitted(email) {
+                // Store the current timestamp for the submitted email
+                var currentTime = new Date().getTime();
+                localStorage.setItem("lastSubmissionTimestamp_" + email, currentTime);
             }
 
             // Function to track phone number link click as a conversion
